@@ -1,7 +1,7 @@
-streamlit
-pandas
-scikit-learn
-joblib
-category_encoders
-xgboost
-numpy
+streamlit==1.57.0
+pandas==3.0.3
+scikit-learn==1.6.1
+joblib==1.5.3
+category_encoders==2.9.0
+xgboost==3.2.0
+numpy==2.4.6
