@@ -1,1 +1,5 @@
 streamlit/
+.gitignore
+venv/
+.venv/
+__pycache__/
