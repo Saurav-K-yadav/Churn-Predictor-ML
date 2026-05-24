@@ -48,14 +48,15 @@ def predict_churn(*args):
         confidence = float(probs[0][0])
         color = "color: #27ae60; font-size: 1.4em; font-weight: bold;"
 
+    bar_color = "#e74c3c" if prediction == 1 else "#2ecc71"
     result_html = f"""
-    <div style='padding: 16px; border-radius: 8px; background: #f9f9f9;'>
-        <p style='{color}'>{label}</p>
-        <p>Model confidence: <strong>{confidence * 100:.1f}%</strong></p>
+    <div style='padding:16px; border-radius:8px; background:#f9f9f9; font-family:sans-serif;'>
+        <div style='font-size:1.4em; font-weight:bold; {color} margin-bottom:10px;'>{label}</div>
+        <div style='font-size:1.1em; color:#333333; margin-bottom:10px;'>
+            The model is <span style='font-weight:bold; color:#333333;'>{confidence * 100:.1f}%</span> sure about this.
+        </div>
         <div style='background:#e0e0e0; border-radius:4px; height:18px; width:100%;'>
-            <div style='background:{"#e74c3c" if prediction==1 else "#2ecc71"};
-                        width:{confidence*100:.1f}%; height:18px; border-radius:4px;'>
-            </div>
+            <div style='background:{bar_color}; width:{confidence*100:.1f}%; height:18px; border-radius:4px;'></div>
         </div>
     </div>
     """
