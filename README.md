@@ -9,7 +9,7 @@ efficiency.
 🛠 Tech Stack
 
   - Machine Learning: scikit-learn, category_encoders, joblib
-  - Web Framework: streamlit
+  - Web Framework: gradio
   - Data Processing: pandas, numpy
   - Infrastructure: Pipelines (Imputation, Scaling, OHE, Target Encoding)
 
@@ -21,11 +21,11 @@ efficiency.
     features for prediction.
   - Confidence Scoring: Provides not just a prediction (Churn/Stay), but a
     probability percentage for model confidence.
-  - Interactive UI: A clean, user-friendly interface built with Streamlit.
+  - Interactive UI: A clean, user-friendly interface built with Gradio.
 
 📦 Project Structure
 
-├── app.py                  # Main Streamlit application
+├── app.py                  # Main gradio application
 ├── requirements.txt        # Dependencies
 ├── customer_churn_model.pkl # The trained pipeline
 ├── shortlisted_features.pkl # List of features selected by RFECV
@@ -33,7 +33,7 @@ efficiency.
 
 💡 How it Works
 
-1.  Input: User fills out customer details in the Streamlit interface.
+1.  Input: User fills out customer details in the Gradio interface.
 2.  Pipeline: Data passes through the preprocessor (Imputation → Encoding →
     Scaling).
 3.  Selection: The RFECV step filters the data to match the shortlisted
